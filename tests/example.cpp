@@ -14,6 +14,12 @@ TEST(MachineCalculatorTest, VerifyArgument_ExpectsExceptionNegativeDuration) {
     ASSERT_THROW(calc.GetPowerConsumption("MillingMachine", -1), ArgumentException);
 }
 
+TEST(MachineCalculatorTest, VerifyArgument_ExpectsThrowUnknownMachineType) {
+    MachinePowerCalculator calc{std::make_shared<MachineFactory>()};
+
+    ASSERT_THROW(calc.GetPowerConsumption("UnknownMachine", 1), ArgumentException);
+}
+
 TEST(MachineCalculatorTest, MillingMachine_VerifyPowerConsumption_1Hour_ExpectLinear) {
     MachinePowerCalculator calc{std::make_shared<MachineFactory>()};
 
@@ -61,3 +67,4 @@ TEST(MachineCalculatorTest, Press_VerifyPowerConsumption_2Hour_ExpectLinear) {
     ASSERT_DOUBLE_EQ(calc.GetPowerConsumption("Press", duration, is_energy_saving),
                      expceted_power_consumption);
 }
+

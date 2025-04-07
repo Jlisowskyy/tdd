@@ -87,7 +87,8 @@ public:
             throw ArgumentException("Duration must be greater than zero");
         }
 
-        return {};
+        auto machine = factory_->CreateMachine(machine_type);
+        return machine->GetPowerConsumption(duration, is_energy_saving);
     }
 };
 

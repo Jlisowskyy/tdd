@@ -1,0 +1,5 @@
+if(EXISTS "/home/Jlisowskyy/storage/shit/io2/cmake-build-debug/tests/UnitTestTarget[1]_tests.cmake")
+  include("/home/Jlisowskyy/storage/shit/io2/cmake-build-debug/tests/UnitTestTarget[1]_tests.cmake")
+else()
+  add_test(UnitTestTarget_NOT_BUILT UnitTestTarget_NOT_BUILT)
+endif()

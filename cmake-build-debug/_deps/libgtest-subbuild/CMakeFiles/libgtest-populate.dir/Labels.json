@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/storage/shit/io2/cmake-build-debug/_deps/libgtest-subbuild/CMakeFiles/libgtest-populate"
+		},
+		{
+			"file" : "/home/storage/shit/io2/cmake-build-debug/_deps/libgtest-subbuild/CMakeFiles/libgtest-populate.rule"
+		},
+		{
+			"file" : "/home/storage/shit/io2/cmake-build-debug/_deps/libgtest-subbuild/CMakeFiles/libgtest-populate-complete.rule"
+		},
+		{
+			"file" : "/home/storage/shit/io2/cmake-build-debug/_deps/libgtest-subbuild/libgtest-populate-prefix/src/libgtest-populate-stamp/libgtest-populate-build.rule"
+		},
+		{
+			"file" : "/home/storage/shit/io2/cmake-build-debug/_deps/libgtest-subbuild/libgtest-populate-prefix/src/libgtest-populate-stamp/libgtest-populate-configure.rule"
+		},
+		{
+			"file" : "/home/storage/shit/io2/cmake-build-debug/_deps/libgtest-subbuild/libgtest-populate-prefix/src/libgtest-populate-stamp/libgtest-populate-download.rule"
+		},
+		{
+			"file" : "/home/storage/shit/io2/cmake-build-debug/_deps/libgtest-subbuild/libgtest-populate-prefix/src/libgtest-populate-stamp/libgtest-populate-install.rule"
+		},
+		{
+			"file" : "/home/storage/shit/io2/cmake-build-debug/_deps/libgtest-subbuild/libgtest-populate-prefix/src/libgtest-populate-stamp/libgtest-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/storage/shit/io2/cmake-build-debug/_deps/libgtest-subbuild/libgtest-populate-prefix/src/libgtest-populate-stamp/libgtest-populate-patch.rule"
+		},
+		{
+			"file" : "/home/storage/shit/io2/cmake-build-debug/_deps/libgtest-subbuild/libgtest-populate-prefix/src/libgtest-populate-stamp/libgtest-populate-test.rule"
+		},
+		{
+			"file" : "/home/storage/shit/io2/cmake-build-debug/_deps/libgtest-subbuild/libgtest-populate-prefix/src/libgtest-populate-stamp/libgtest-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"libgtest-populate"
+		],
+		"name" : "libgtest-populate"
+	}
+}

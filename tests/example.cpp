@@ -1,7 +1,9 @@
 #include <gtest/gtest.h>
 
-TEST(Example, Example)
-{
-    ASSERT_EQ(1, 1);
-    ASSERT_TRUE(true);
+#include <io_lib.hpp>
+
+TEST(MachineCalculatorTest, VerifyArgument_ExpectsException) {
+    MachinePowerCalculator calc{};
+
+    ASSERT_THROW(calc.GetPowerConsumption("", 0), ArgumentException);
 }

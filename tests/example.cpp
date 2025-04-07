@@ -103,3 +103,15 @@ TEST(MachineCalculatorTest, Lathe_VerifyPowerConsumption_100Hour_ExpectLogarithm
     ASSERT_EQ(calc.GetPowerConsumption("Lathe", duration, is_energy_saving),
               expceted_power_consumption);
 }
+
+TEST(MachineCalculatorTest, IMachine_Verify_EnergySaving) {
+    MachinePowerCalculator calc{std::make_shared<MachineFactory>()};
+
+    // data
+    const int duration = 1; // 1 hour
+    const bool is_energy_saving = true;
+    const double expceted_power_consumption = 5.0 * 0.8; // 4.0 kWh
+
+    ASSERT_EQ(calc.GetPowerConsumption("MillingMachine", duration, is_energy_saving),
+              expceted_power_consumption);
+}

@@ -112127,3 +112127,111 @@ MachineCalculatorTest_Lathe_VerifyPowerConsumption_100Hour_ExpectLogarithmic_Tes
 # 104 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
                                         ;
 }
+
+
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+static_assert(sizeof(
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"MachineCalculatorTest"
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+) > 1, "test_suite_name must not be empty"); static_assert(sizeof(
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"IMachine_Verify_EnergySaving"
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+) > 1, "test_name must not be empty"); class 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_IMachine_Verify_EnergySaving_Test 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+: public ::testing::Test { public: 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_IMachine_Verify_EnergySaving_Test
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+() = default; ~
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_IMachine_Verify_EnergySaving_Test
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+() override = default; 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_IMachine_Verify_EnergySaving_Test 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+(const 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_IMachine_Verify_EnergySaving_Test 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&) = delete; 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_IMachine_Verify_EnergySaving_Test 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+& operator=( const 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_IMachine_Verify_EnergySaving_Test 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&) = delete; 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_IMachine_Verify_EnergySaving_Test 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+(
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_IMachine_Verify_EnergySaving_Test 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&&) noexcept = delete; 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_IMachine_Verify_EnergySaving_Test 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+& operator=( 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_IMachine_Verify_EnergySaving_Test 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&&) noexcept = delete; private: void TestBody() override; [[maybe_unused]] static ::testing::TestInfo* const test_info_; }; ::testing::TestInfo* const 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_IMachine_Verify_EnergySaving_Test
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+::test_info_ = ::testing::internal::MakeAndRegisterTestInfo( 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"MachineCalculatorTest"
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+, 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"IMachine_Verify_EnergySaving"
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+, nullptr, nullptr, ::testing::internal::CodeLocation("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 107), (::testing::internal::GetTestTypeId()), ::testing::internal::SuiteApiResolver< ::testing::Test>::GetSetUpCaseOrSuite("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 107), ::testing::internal::SuiteApiResolver< ::testing::Test>::GetTearDownCaseOrSuite("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 107), new ::testing::internal::TestFactoryImpl<
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_IMachine_Verify_EnergySaving_Test
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+>); void 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_IMachine_Verify_EnergySaving_Test
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+::TestBody() 
+# 107 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+                                                         {
+    MachinePowerCalculator calc{std::make_shared<MachineFactory>()};
+
+
+    const int duration = 1;
+    const bool is_energy_saving = true;
+    const double expceted_power_consumption = 5.0 * 0.8;
+
+    
+# 115 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   switch (0) case 0: default: if (const ::testing::AssertionResult gtest_ar = (::testing::internal::EqHelper::Compare(
+# 115 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   "calc.GetPowerConsumption(\"MillingMachine\", duration, is_energy_saving)"
+# 115 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   , 
+# 115 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   "expceted_power_consumption"
+# 115 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   , 
+# 115 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   calc.GetPowerConsumption("MillingMachine", duration, is_energy_saving)
+# 115 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   , 
+# 115 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   expceted_power_consumption
+# 115 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   ))) ; else return ::testing::internal::AssertHelper(::testing::TestPartResult::kFatalFailure, "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 115, gtest_ar.failure_message()) = ::testing::Message()
+                                         
+# 116 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+                                        ;
+}

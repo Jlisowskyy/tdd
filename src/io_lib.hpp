@@ -29,6 +29,10 @@ public:
             throw ArgumentException("Machine type cannot be empty");
         }
 
+        if (duration < 0) {
+            throw ArgumentException("Duration must be greater than zero");
+        }
+
         return {};
     }
 };

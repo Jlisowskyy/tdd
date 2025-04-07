@@ -101731,6 +101731,10 @@ public:
             throw ArgumentException("Machine type cannot be empty");
         }
 
+        if (duration < 0) {
+            throw ArgumentException("Duration must be greater than zero");
+        }
+
         return {};
     }
 };
@@ -101744,55 +101748,55 @@ static_assert(sizeof(
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 ) > 1, "test_suite_name must not be empty"); static_assert(sizeof(
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-"VerifyArgument_ExpectsException"
+"VerifyArgument_ExpectsExceptionEmptyMachineType"
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 ) > 1, "test_name must not be empty"); class 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-MachineCalculatorTest_VerifyArgument_ExpectsException_Test 
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionEmptyMachineType_Test 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 : public ::testing::Test { public: 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-MachineCalculatorTest_VerifyArgument_ExpectsException_Test
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionEmptyMachineType_Test
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 () = default; ~
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-MachineCalculatorTest_VerifyArgument_ExpectsException_Test
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionEmptyMachineType_Test
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 () override = default; 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-MachineCalculatorTest_VerifyArgument_ExpectsException_Test 
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionEmptyMachineType_Test 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 (const 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-MachineCalculatorTest_VerifyArgument_ExpectsException_Test 
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionEmptyMachineType_Test 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 &) = delete; 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-MachineCalculatorTest_VerifyArgument_ExpectsException_Test 
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionEmptyMachineType_Test 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 & operator=( const 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-MachineCalculatorTest_VerifyArgument_ExpectsException_Test 
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionEmptyMachineType_Test 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 &) = delete; 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-MachineCalculatorTest_VerifyArgument_ExpectsException_Test 
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionEmptyMachineType_Test 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 (
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-MachineCalculatorTest_VerifyArgument_ExpectsException_Test 
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionEmptyMachineType_Test 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 &&) noexcept = delete; 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-MachineCalculatorTest_VerifyArgument_ExpectsException_Test 
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionEmptyMachineType_Test 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 & operator=( 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-MachineCalculatorTest_VerifyArgument_ExpectsException_Test 
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionEmptyMachineType_Test 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 &&) noexcept = delete; private: void TestBody() override; [[maybe_unused]] static ::testing::TestInfo* const test_info_; }; ::testing::TestInfo* const 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-MachineCalculatorTest_VerifyArgument_ExpectsException_Test
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionEmptyMachineType_Test
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 ::test_info_ = ::testing::internal::MakeAndRegisterTestInfo( 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
@@ -101800,19 +101804,19 @@ MachineCalculatorTest_VerifyArgument_ExpectsException_Test
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 , 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-"VerifyArgument_ExpectsException"
+"VerifyArgument_ExpectsExceptionEmptyMachineType"
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 , nullptr, nullptr, ::testing::internal::CodeLocation("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 5), (::testing::internal::GetTestTypeId()), ::testing::internal::SuiteApiResolver< ::testing::Test>::GetSetUpCaseOrSuite("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 5), ::testing::internal::SuiteApiResolver< ::testing::Test>::GetTearDownCaseOrSuite("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 5), new ::testing::internal::TestFactoryImpl<
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-MachineCalculatorTest_VerifyArgument_ExpectsException_Test
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionEmptyMachineType_Test
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 >); void 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-MachineCalculatorTest_VerifyArgument_ExpectsException_Test
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionEmptyMachineType_Test
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
 ::TestBody() 
 # 5 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
-                                                            {
+                                                                            {
     MachinePowerCalculator calc{};
 
     
@@ -101856,4 +101860,126 @@ MachineCalculatorTest_VerifyArgument_ExpectsException_Test
    ".\n  Actual: it throws nothing."; goto gtest_label_testthrow_8; } } else gtest_label_testthrow_8 : return ::testing::internal::AssertHelper(::testing::TestPartResult::kFatalFailure, "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 8, gtest_msg.value.c_str()) = ::testing::Message()
 # 8 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
                                                                    ;
+}
+
+
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+static_assert(sizeof(
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"MachineCalculatorTest"
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+) > 1, "test_suite_name must not be empty"); static_assert(sizeof(
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"VerifyArgument_ExpectsExceptionNegativeDuration"
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+) > 1, "test_name must not be empty"); class 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionNegativeDuration_Test 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+: public ::testing::Test { public: 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionNegativeDuration_Test
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+() = default; ~
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionNegativeDuration_Test
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+() override = default; 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionNegativeDuration_Test 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+(const 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionNegativeDuration_Test 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&) = delete; 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionNegativeDuration_Test 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+& operator=( const 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionNegativeDuration_Test 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&) = delete; 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionNegativeDuration_Test 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+(
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionNegativeDuration_Test 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&&) noexcept = delete; 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionNegativeDuration_Test 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+& operator=( 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionNegativeDuration_Test 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&&) noexcept = delete; private: void TestBody() override; [[maybe_unused]] static ::testing::TestInfo* const test_info_; }; ::testing::TestInfo* const 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionNegativeDuration_Test
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+::test_info_ = ::testing::internal::MakeAndRegisterTestInfo( 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"MachineCalculatorTest"
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+, 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"VerifyArgument_ExpectsExceptionNegativeDuration"
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+, nullptr, nullptr, ::testing::internal::CodeLocation("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 11), (::testing::internal::GetTestTypeId()), ::testing::internal::SuiteApiResolver< ::testing::Test>::GetSetUpCaseOrSuite("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 11), ::testing::internal::SuiteApiResolver< ::testing::Test>::GetTearDownCaseOrSuite("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 11), new ::testing::internal::TestFactoryImpl<
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionNegativeDuration_Test
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+>); void 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_VerifyArgument_ExpectsExceptionNegativeDuration_Test
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+::TestBody() 
+# 11 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+                                                                            {
+    MachinePowerCalculator calc{};
+
+    
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   switch (0) case 0: default: if (::testing::internal::TrueWithString gtest_msg{}) { bool gtest_caught_expected = false; try { if (::testing::internal::AlwaysTrue()) { 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   calc.GetPowerConsumption("MillingMachine", -1)
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   ; } else static_assert(true, ""); } catch (
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   ArgumentException 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   const&) { gtest_caught_expected = true; } catch (typename std::conditional< std::is_same<typename std::remove_cv<typename std::remove_reference< 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   ArgumentException
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   >::type>::type, std::exception>::value, const ::testing::internal::NeverThrown&, const std::exception&>::type e) { gtest_msg.value = "Expected: " 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   "calc.GetPowerConsumption(\"MillingMachine\", -1)" 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   " throws an exception of type " 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   "ArgumentException" 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   ".\n  Actual: it throws "; gtest_msg.value += ::testing::internal::GetTypeName(typeid(e)); gtest_msg.value += " with description \""; gtest_msg.value += e.what(); gtest_msg.value += "\"."; goto gtest_label_testthrow_14; } catch (...) { gtest_msg.value = "Expected: " 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   "calc.GetPowerConsumption(\"MillingMachine\", -1)" 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   " throws an exception of type " 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   "ArgumentException" 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   ".\n  Actual: it throws a different type."; goto gtest_label_testthrow_14; } if (!gtest_caught_expected) { gtest_msg.value = "Expected: " 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   "calc.GetPowerConsumption(\"MillingMachine\", -1)" 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   " throws an exception of type " 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   "ArgumentException" 
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   ".\n  Actual: it throws nothing."; goto gtest_label_testthrow_14; } } else gtest_label_testthrow_14 : return ::testing::internal::AssertHelper(::testing::TestPartResult::kFatalFailure, "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 14, gtest_msg.value.c_str()) = ::testing::Message()
+# 14 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+                                                                                  ;
 }

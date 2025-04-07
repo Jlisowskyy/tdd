@@ -6,6 +6,7 @@
 #include <memory>
 #include <unordered_map>
 #include <functional>
+#include <cmath>
 
 class ArgumentException final : public std::exception {
     std::string message;
@@ -36,8 +37,8 @@ public:
 
     ~MillingMachine() override = default;
 
-    double GetPowerConsumption(int duration, [[maybe_unused]] bool is_energy_saving) override {
-        return kBaseConsumption * duration;
+    double GetPowerConsumption(int duration, bool is_energy_saving) override {
+        return kBaseConsumption * duration * (is_energy_saving ? 0.8 : 1.0);
     }
 };
 
@@ -48,8 +49,20 @@ public:
 
     ~Press() override = default;
 
-    double GetPowerConsumption(int duration, [[maybe_unused]] bool is_energy_saving) override {
-        return kBaseConsumption * duration;
+    double GetPowerConsumption(int duration, bool is_energy_saving) override {
+        return kBaseConsumption * duration * (is_energy_saving ? 0.8 : 1.0);
+    }
+};
+
+class Lathe : public IMachine {
+    static constexpr double kBaseConsumption = 3.5; // Base power consumption in kWh
+public:
+    Lathe() = default;
+
+    ~Lathe() override = default;
+
+    double GetPowerConsumption(int duration, bool is_energy_saving) override {
+        return kBaseConsumption * std::log10(duration + 1) * (is_energy_saving ? 0.8 : 1.0);
     }
 };
 
@@ -72,6 +85,7 @@ public:
         static std::unordered_map<std::string, std::function<std::shared_ptr<IMachine>()> > machine_map = {
             {"MillingMachine", []() { return std::make_shared<MillingMachine>(); }},
             {"Press", []() { return std::make_shared<Press>(); }},
+            {"Lathe", []() { return std::make_shared<Lathe>(); }},
         };
 
         if (machine_map.find(machine_type) != machine_map.end()) {

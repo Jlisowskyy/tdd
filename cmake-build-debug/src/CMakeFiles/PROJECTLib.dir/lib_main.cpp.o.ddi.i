@@ -68453,6 +68453,18 @@ public:
     }
 };
 
+class Press : public IMachine {
+    static constexpr double kBaseConsumption = 7.2;
+public:
+    Press() = default;
+
+    ~Press() override = default;
+
+    double GetPowerConsumption(int duration, [[maybe_unused]] bool is_energy_saving) override {
+        return kBaseConsumption * duration;
+    }
+};
+
 class IMachineFactory {
 public:
     IMachineFactory() = default;
@@ -68465,11 +68477,13 @@ public:
 class MachineFactory : public IMachineFactory {
 public:
     MachineFactory() = default;
+
     ~MachineFactory() override = default;
 
     std::shared_ptr<IMachine> CreateMachine(const std::string &machine_type) override {
-        static std::unordered_map<std::string, std::function<std::shared_ptr<IMachine>()>> machine_map = {
+        static std::unordered_map<std::string, std::function<std::shared_ptr<IMachine>()> > machine_map = {
             {"MillingMachine", []() { return std::make_shared<MillingMachine>(); }},
+            {"Press", []() { return std::make_shared<Press>(); }},
         };
 
         if (machine_map.find(machine_type) != machine_map.end()) {

@@ -101735,6 +101735,18 @@ public:
     }
 };
 
+class Press : public IMachine {
+    static constexpr double kBaseConsumption = 7.2;
+public:
+    Press() = default;
+
+    ~Press() override = default;
+
+    double GetPowerConsumption(int duration, [[maybe_unused]] bool is_energy_saving) override {
+        return kBaseConsumption * duration;
+    }
+};
+
 class IMachineFactory {
 public:
     IMachineFactory() = default;
@@ -101747,11 +101759,13 @@ public:
 class MachineFactory : public IMachineFactory {
 public:
     MachineFactory() = default;
+
     ~MachineFactory() override = default;
 
     std::shared_ptr<IMachine> CreateMachine(const std::string &machine_type) override {
-        static std::unordered_map<std::string, std::function<std::shared_ptr<IMachine>()>> machine_map = {
+        static std::unordered_map<std::string, std::function<std::shared_ptr<IMachine>()> > machine_map = {
             {"MillingMachine", []() { return std::make_shared<MillingMachine>(); }},
+            {"Press", []() { return std::make_shared<Press>(); }},
         };
 
         if (machine_map.find(machine_type) != machine_map.end()) {
@@ -102244,5 +102258,221 @@ MachineCalculatorTest_MillingMachine_VerifyPowerConsumption_2Hours_ExpectLinear_
    ))) ; else return ::testing::internal::AssertHelper(::testing::TestPartResult::kFatalFailure, "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 37, gtest_ar.failure_message()) = ::testing::Message()
                                                 
 # 38 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+                                               ;
+}
+
+
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+static_assert(sizeof(
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"MachineCalculatorTest"
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+) > 1, "test_suite_name must not be empty"); static_assert(sizeof(
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"Press_VerifyPowerConsumption_1Hour_ExpectLinear"
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+) > 1, "test_name must not be empty"); class 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_1Hour_ExpectLinear_Test 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+: public ::testing::Test { public: 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_1Hour_ExpectLinear_Test
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+() = default; ~
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_1Hour_ExpectLinear_Test
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+() override = default; 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_1Hour_ExpectLinear_Test 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+(const 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_1Hour_ExpectLinear_Test 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&) = delete; 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_1Hour_ExpectLinear_Test 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+& operator=( const 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_1Hour_ExpectLinear_Test 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&) = delete; 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_1Hour_ExpectLinear_Test 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+(
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_1Hour_ExpectLinear_Test 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&&) noexcept = delete; 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_1Hour_ExpectLinear_Test 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+& operator=( 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_1Hour_ExpectLinear_Test 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&&) noexcept = delete; private: void TestBody() override; [[maybe_unused]] static ::testing::TestInfo* const test_info_; }; ::testing::TestInfo* const 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_1Hour_ExpectLinear_Test
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+::test_info_ = ::testing::internal::MakeAndRegisterTestInfo( 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"MachineCalculatorTest"
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+, 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"Press_VerifyPowerConsumption_1Hour_ExpectLinear"
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+, nullptr, nullptr, ::testing::internal::CodeLocation("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 41), (::testing::internal::GetTestTypeId()), ::testing::internal::SuiteApiResolver< ::testing::Test>::GetSetUpCaseOrSuite("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 41), ::testing::internal::SuiteApiResolver< ::testing::Test>::GetTearDownCaseOrSuite("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 41), new ::testing::internal::TestFactoryImpl<
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_1Hour_ExpectLinear_Test
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+>); void 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_1Hour_ExpectLinear_Test
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+::TestBody() 
+# 41 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+                                                                            {
+    MachinePowerCalculator calc{std::make_shared<MachineFactory>()};
+
+
+    const int duration = 1;
+    const bool is_energy_saving = false;
+    const double expceted_power_consumption = 7.2;
+
+    
+# 49 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   switch (0) case 0: default: if (const ::testing::AssertionResult gtest_ar = (::testing::internal::CmpHelperFloatingPointEQ<double>(
+# 49 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   "calc.GetPowerConsumption(\"Press\", duration, is_energy_saving)"
+# 49 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   , 
+# 49 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   "expceted_power_consumption"
+# 49 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   , 
+# 49 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   calc.GetPowerConsumption("Press", duration, is_energy_saving)
+# 49 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   , 
+# 49 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   expceted_power_consumption
+# 49 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   ))) ; else return ::testing::internal::AssertHelper(::testing::TestPartResult::kFatalFailure, "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 49, gtest_ar.failure_message()) = ::testing::Message()
+                                                
+# 50 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+                                               ;
+}
+
+
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+static_assert(sizeof(
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"MachineCalculatorTest"
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+) > 1, "test_suite_name must not be empty"); static_assert(sizeof(
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"Press_VerifyPowerConsumption_2Hour_ExpectLinear"
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+) > 1, "test_name must not be empty"); class 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_2Hour_ExpectLinear_Test 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+: public ::testing::Test { public: 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_2Hour_ExpectLinear_Test
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+() = default; ~
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_2Hour_ExpectLinear_Test
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+() override = default; 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_2Hour_ExpectLinear_Test 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+(const 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_2Hour_ExpectLinear_Test 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&) = delete; 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_2Hour_ExpectLinear_Test 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+& operator=( const 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_2Hour_ExpectLinear_Test 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&) = delete; 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_2Hour_ExpectLinear_Test 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+(
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_2Hour_ExpectLinear_Test 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&&) noexcept = delete; 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_2Hour_ExpectLinear_Test 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+& operator=( 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_2Hour_ExpectLinear_Test 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+&&) noexcept = delete; private: void TestBody() override; [[maybe_unused]] static ::testing::TestInfo* const test_info_; }; ::testing::TestInfo* const 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_2Hour_ExpectLinear_Test
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+::test_info_ = ::testing::internal::MakeAndRegisterTestInfo( 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"MachineCalculatorTest"
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+, 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+"Press_VerifyPowerConsumption_2Hour_ExpectLinear"
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+, nullptr, nullptr, ::testing::internal::CodeLocation("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 53), (::testing::internal::GetTestTypeId()), ::testing::internal::SuiteApiResolver< ::testing::Test>::GetSetUpCaseOrSuite("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 53), ::testing::internal::SuiteApiResolver< ::testing::Test>::GetTearDownCaseOrSuite("/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 53), new ::testing::internal::TestFactoryImpl<
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_2Hour_ExpectLinear_Test
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+>); void 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+MachineCalculatorTest_Press_VerifyPowerConsumption_2Hour_ExpectLinear_Test
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+::TestBody() 
+# 53 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+                                                                            {
+    MachinePowerCalculator calc{std::make_shared<MachineFactory>()};
+
+
+    const int duration = 2;
+    const bool is_energy_saving = false;
+    const double expceted_power_consumption = 14.4;
+
+    
+# 61 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   switch (0) case 0: default: if (const ::testing::AssertionResult gtest_ar = (::testing::internal::CmpHelperFloatingPointEQ<double>(
+# 61 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   "calc.GetPowerConsumption(\"Press\", duration, is_energy_saving)"
+# 61 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   , 
+# 61 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   "expceted_power_consumption"
+# 61 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   , 
+# 61 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   calc.GetPowerConsumption("Press", duration, is_energy_saving)
+# 61 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   , 
+# 61 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
+   expceted_power_consumption
+# 61 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp" 3 4
+   ))) ; else return ::testing::internal::AssertHelper(::testing::TestPartResult::kFatalFailure, "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp", 61, gtest_ar.failure_message()) = ::testing::Message()
+                                                
+# 62 "/home/Jlisowskyy/storage/shit/io2/tests/example.cpp"
                                                ;
 }

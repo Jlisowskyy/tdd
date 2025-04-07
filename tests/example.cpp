@@ -37,3 +37,27 @@ TEST(MachineCalculatorTest, MillingMachine_VerifyPowerConsumption_2Hours_ExpectL
     ASSERT_DOUBLE_EQ(calc.GetPowerConsumption("MillingMachine", duration, is_energy_saving),
                      expceted_power_consumption);
 }
+
+TEST(MachineCalculatorTest, Press_VerifyPowerConsumption_1Hour_ExpectLinear) {
+    MachinePowerCalculator calc{std::make_shared<MachineFactory>()};
+
+    // data
+    const int duration = 1; // 1 hour
+    const bool is_energy_saving = false;
+    const double expceted_power_consumption = 7.2; // 7.2 kWh
+
+    ASSERT_DOUBLE_EQ(calc.GetPowerConsumption("Press", duration, is_energy_saving),
+                     expceted_power_consumption);
+}
+
+TEST(MachineCalculatorTest, Press_VerifyPowerConsumption_2Hour_ExpectLinear) {
+    MachinePowerCalculator calc{std::make_shared<MachineFactory>()};
+
+    // data
+    const int duration = 2; // 2 hours
+    const bool is_energy_saving = false;
+    const double expceted_power_consumption = 14.4; // 14.4 kWh
+
+    ASSERT_DOUBLE_EQ(calc.GetPowerConsumption("Press", duration, is_energy_saving),
+                     expceted_power_consumption);
+}
